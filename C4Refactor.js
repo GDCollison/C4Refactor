@@ -4,12 +4,18 @@
  * column until a player gets four-in-a-row (horiz, vert, or diag) or until
  * board fills (tie)
  */
-
-const WIDTH = 7;
-const HEIGHT = 6;
-
-let currPlayer = 1; // active player: 1 or 2
-let board = []; // array of rows, each row is array of cells  (board[y][x])
+// I can't even find the differences between the starter code and the solution code. I'm lost on this.
+class Game {
+  constructor(p1, p2, height = 6, width = 7) {
+    this.players = [p1, p2];
+    this.height = height;
+    this.width = width;
+    this.currPlayer = p1;
+    this.makeBoard();
+    this.makeHtmlBoard();
+    this.gameover = false;
+  }
+};
 
 /** makeBoard: create in-JS board structure:
  *   board = array of rows, each row is array of cells  (board[y][x])
